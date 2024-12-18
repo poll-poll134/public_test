@@ -11,28 +11,28 @@
 
 ```
 #1.工具放到实例
-adb push vpick-1.0.5.tar.gz /data/local/tmp/
+adb push vpick-1.0.X.tar.gz /data/local/tmp/
 #2.解压工具包
-tar -zxvf vpick-1.0.5.tar.gz
+tar -zxvf vpick-1.0.X.tar.gz
 #3.安装工具
-cd vpick-1.0.5 && ./install.sh
+cd vpick-1.0.X && ./install.sh
 #4.重启实例
 ```
 
-**查询当前机型库**：
+**查询当前数据包内容**：
 
 ```
 vpick list
 ```
 
-**机库功能操作**：
+**数据功能操作**：
 
 ```
 #一键机型匹配到系统，例：
 gif config -a device.brand=Xiaomi -a device.model=Mi10
 ```
 
-**扩展机型采集**：
+**扩展数据采集**：
 
 > [!TIP]
 >
