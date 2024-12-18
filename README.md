@@ -1,6 +1,6 @@
 # public_test
 
-> [!TIP]
+> [!WARNING]
 >
 > - 本工具vpick意在数据安全相关问题的学习与研究，请勿作为其他商业活动及用途，如因此发生相关法律问题，请自行承担
 > - 工具分为两个模块，【数据包 + 数据还原工具】、【数据备份工具】
@@ -46,10 +46,18 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 > - 需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）使用如下命令查看需要备份数据的硬件序列号,如: HWXXXXX
 ```
 adbdevices.bat
+```
+```
 #2.使用如下命令给您需要备份数据的手机设置序列号便于识别, 如：setsn.bat HWXXXXX
 setsn.bat <硬件序列号>
 #3.使用如下命令一键备份您手机的数据,完成后将自动打开备份文件所在目录
 vpick.bat
 #4.备份的数据将形成一个tar包，例如下述例子中的命令放到需要还原手机的该路径：/data/logcal/tmp/plugin/meta/vpk/
 adb push Xiaomi=POCO=POCOF2Pro=12=SKQ1.211006.001=N=cf9b5186516f8e33684598d9865a73d.tar.gz /data/logcal/tmp/plugin/meta/vpk/
+```
+
+
+
+```
+List getKeepaliveApp();  // 获取当前的保活应用包名列表
 ```
