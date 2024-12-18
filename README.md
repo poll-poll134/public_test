@@ -15,7 +15,7 @@
 
 
 
-**1.vpick-V1.0.X.tar.gz 数据还原工具安装及使用方法**：
+###1.vpick-V1.0.X.tar.gz 数据还原工具安装及使用方法：###
 > [!TIP]
 >   【在安卓手机adb shell中使用，用于还原数据】
 > - 1.使用步骤1命令把工具放到安卓手机
@@ -47,7 +47,7 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 ```
 
 
-**2.vpick-V1.0.X-win64.tar.gz 数据备份工具安装及使用方法**：
+###2.vpick-V1.0.X-win64.tar.gz 数据备份工具安装及使用方法：###
 > [!TIP]
 >                      【在PC上解压工具包后，在window终端运行，用于备份数据】
 > - 需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）
