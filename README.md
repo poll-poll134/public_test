@@ -9,28 +9,28 @@
 > - 由于不同品牌和型号数据备份方法不同，安装vpick后请选择品牌/型号参数，即可匹配对应品牌型号的手机的备份数据
 > - 当匹配到多款机型时，将随机选中其中一款
 
-**安装步骤**：
+**安装方法**：
 
 ```
-#1.工具放到安卓手机
+#1.使用如下命令把工具放到安卓手机
 adb push vpick-1.0.X.tar.gz /data/local/tmp/
-#2.解压工具包
+#2.使用如下命令解压工具包
 tar -zxvf vpick-1.0.X.tar.gz
-#3.安装工具
+#3.使用如下命令安装工具
 cd vpick-1.0.X && ./install.sh
-#4.重启手机
+#4.安装后重启手机
 ```
 
-**查询当前数据包内容**：
+**查询数据包内容**：
 
 ```
 vpick list
 ```
 
-**数据功能操作**：
+**工具相关功能操作**：
 
 ```
-#一键机型匹配到系统，例：
+#选择对应的品牌和型号还原数据到您的手机，例：
 gif config -a device.brand=Xiaomi -a device.model=Mi10
 ```
 
@@ -38,16 +38,16 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 
 > [!TIP]
 >
-> - 提取工具包：vpick-1.0.X-win64.tar.gz
-> - vpick-win64是一个在window端运行的，用于备份真机参数的工具
+> - PC备份数据工具包：vpick-1.0.X-win64.tar.gz
+> - 在PC上解压工具包后，在window终端运行，用于备份数据
 
 ```
-#1.需要安装adb与usb驱动，并打开真机的开发者模式，连接真机到电脑且真机给予usb连接权限（且使用传输文件模式）使用如下命令查看真机的硬件序列号,如: HWXXXXX
+#1.需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）使用如下命令查看需要备份数据的硬件序列号,如: HWXXXXX
 adbdevices.bat
-#2.设置备份目标真机, 如：setsn.bat HWXXXXX
+#2.使用如下命令给您需要备份数据的手机设置序列号便于识别, 如：setsn.bat HWXXXXX
 setsn.bat <硬件序列号>
-#3.使用如下命令一键备份目标真机的参数,完成后将自动打开备份文件所在目录
+#3.使用如下命令一键备份您手机的数据,完成后将自动打开备份文件所在目录
 vpick.bat
-#4.采集到的tar包，例如下述例子中的命令放到实例的该路径：/data/logcal/tmp/plugin/meta/vpk/
+#4.备份的数据将形成一个tar包，例如下述例子中的命令放到需要还原手机的该路径：/data/logcal/tmp/plugin/meta/vpk/
 adb push Xiaomi=POCO=POCOF2Pro=12=SKQ1.211006.001=N=cf9b5186516f8e33684598d9865a73d.tar.gz /data/logcal/tmp/plugin/meta/vpk/
 ```
