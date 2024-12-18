@@ -44,28 +44,18 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 > - 在PC上解压工具包后，在window终端运行，用于备份数据
 
 > [!TIP]
->
+>   【在PC上解压工具包后，在window终端运行，用于备份数据】
 > - 1.需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）使用如下命令查看需要备份数据的硬件序列号,如: HWXXXXX
+> - 2.使用如下命令给您需要备份数据的手机设置序列号便于识别, 如：setsn.bat HWXXXXX
+> - 3.使用如下命令一键备份您手机的数据,完成后将自动打开备份文件所在目录
+> - 4.备份的数据将形成一个tar包，例如下述例子中的命令放到需要还原手机的该路径：/data/logcal/tmp/plugin/meta/vpk/
 ```
+#步骤1
 adbdevices.bat
-```
-> [!TIP]
->
->  2.使用如下命令给您需要备份数据的手机设置序列号便于识别, 如：setsn.bat HWXXXXX
-```
+#步骤2
 setsn.bat <硬件序列号>
-```
-
-> [!TIP]
->
-> 3.使用如下命令一键备份您手机的数据,完成后将自动打开备份文件所在目录
-```
+#步骤3
 vpick.bat
-```
-
-> [!TIP]
->
-> 4.备份的数据将形成一个tar包，例如下述例子中的命令放到需要还原手机的该路径：/data/logcal/tmp/plugin/meta/vpk/
-```
+#步骤4
 adb push Xiaomi=POCO=POCOF2Pro=12=SKQ1.211006.001=N=cf9b5186516f8e33684598d9865a73d.tar.gz /data/logcal/tmp/plugin/meta/vpk/
 ```
