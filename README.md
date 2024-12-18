@@ -11,6 +11,7 @@
 
 
 
+
 **vpick-V1.0.X.tar.gz 数据还原工具安装及使用方法**：
 
 ```
@@ -22,14 +23,13 @@ tar -zxvf vpick-1.0.X.tar.gz
 cd vpick-1.0.X && ./install.sh
 #4.安装后重启手机
 ```
-
-**查询数据包内容**：
+**查询操作**：
 
 ```
 vpick list
 ```
 
-**工具相关功能操作**：
+**还原操作**：
 
 ```
 #选择对应的品牌和型号还原数据到您的手机，例：
@@ -61,7 +61,3 @@ adb push Xiaomi=POCO=POCOF2Pro=12=SKQ1.211006.001=N=cf9b5186516f8e33684598d9865a
 ```
 
 
-
-```
-List getKeepaliveApp();  // 获取当前的保活应用包名列表
-```
