@@ -2,21 +2,23 @@
 
 > [!TIP]
 >
-> - 本工具vpick意在技术学习与研究，请勿作为其他商业活动及用途，如因此发生相关法律问题，请自行承担
-> - 工具分为两个模块，【数据包 + 生效包】、【数据搜集工具】
-> - vpick会监控品牌和型号的变化，当两者同时匹配上机型库的机型时将把具体的机型参数展开
+> - 本工具vpick意在数据安全相关问题的学习与研究，请勿作为其他商业活动及用途，如因此发生相关法律问题，请自行承担
+> - 工具分为两个模块，【数据包 + 数据还原工具】、【数据备份工具】
+> - 数据包 + 数据还原工具 = vpick-V1.0.X.tar.gz，用于安卓手机的数据还原，包里已含默认数据包
+> - 数据备份工具 = vpick-V1.0.X-win64.tar.gz，PC桌面工具，用于给安卓手机做备份数据使用
+> - 由于不同品牌和型号数据备份方法不同，安装vpick后请选择品牌/型号参数，即可匹配对应品牌型号的手机的备份数据
 > - 当匹配到多款机型时，将随机选中其中一款
 
 **安装步骤**：
 
 ```
-#1.工具放到实例
+#1.工具放到安卓手机
 adb push vpick-1.0.X.tar.gz /data/local/tmp/
 #2.解压工具包
 tar -zxvf vpick-1.0.X.tar.gz
 #3.安装工具
 cd vpick-1.0.X && ./install.sh
-#4.重启实例
+#4.重启手机
 ```
 
 **查询当前数据包内容**：
@@ -36,7 +38,7 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 
 > [!TIP]
 >
-> - 第三方专用提取工具包：vpick-1.0.4-win64.tar.gz
+> - 提取工具包：vpick-1.0.X-win64.tar.gz
 > - vpick-win64是一个在window端运行的，用于备份真机参数的工具
 
 ```
@@ -49,11 +51,3 @@ vpick.bat
 #4.采集到的tar包，例如下述例子中的命令放到实例的该路径：/data/logcal/tmp/plugin/meta/vpk/
 adb push Xiaomi=POCO=POCOF2Pro=12=SKQ1.211006.001=N=cf9b5186516f8e33684598d9865a73d.tar.gz /data/logcal/tmp/plugin/meta/vpk/
 ```
-
-> [!IMPORTANT]
->
-> - 当前支持 pm list features、指纹、厂商、品牌、型号、设备名称、构建ID、构建服务主机名称、构建者、构建日期、安全补丁、平台、主板、boot、bootloader、硬件序列号、硬件版本等
-> - 指纹：ro.build.fingerprint不直接修改该值，转成persist.build.v-fingerprint，工具可检测
-> - 品牌：ro.product.odm.model会同步到设备名称
-> - 硬件序列号：ro.serialno不是直接拷贝，会参按照机型的ro.serialno随机生成
-> - 硬件版本号：小米的ro.boot.hwversion将转成AOSP的ro.boot.hardware.revision
