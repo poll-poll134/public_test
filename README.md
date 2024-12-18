@@ -23,13 +23,13 @@ tar -zxvf vpick-1.0.X.tar.gz
 cd vpick-1.0.X && ./install.sh
 #4.操作后重启手机即安装完成
 ```
-**查询操作**：
+**1)查询操作**：
 
 ```
 vpick list
 ```
 
-**还原操作**：
+**2)还原操作**：
 
 ```
 #选择对应的品牌和型号还原数据到您的手机，例：
@@ -41,23 +41,31 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 **2.vpick-V1.0.X-win64.tar.gz 数据备份工具安装及使用方法**：
 
 > [!TIP]
->
-> - PC备份数据工具包：vpick-1.0.X-win64.tar.gz
 > - 在PC上解压工具包后，在window终端运行，用于备份数据
 
 > [!TIP]
 >
-> - 需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）使用如下命令查看需要备份数据的硬件序列号,如: HWXXXXX
+> 1.需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）使用如下命令查看需要备份数据的硬件序列号,如: HWXXXXX
 ```
 adbdevices.bat
 ```
+> [!TIP]
+>
+>  2.使用如下命令给您需要备份数据的手机设置序列号便于识别, 如：setsn.bat HWXXXXX
 ```
-#2.使用如下命令给您需要备份数据的手机设置序列号便于识别, 如：setsn.bat HWXXXXX
 setsn.bat <硬件序列号>
-#3.使用如下命令一键备份您手机的数据,完成后将自动打开备份文件所在目录
+```
+
+> [!TIP]
+>
+> 3.使用如下命令一键备份您手机的数据,完成后将自动打开备份文件所在目录
+```
 vpick.bat
-#4.备份的数据将形成一个tar包，例如下述例子中的命令放到需要还原手机的该路径：/data/logcal/tmp/plugin/meta/vpk/
+```
+
+> [!TIP]
+>
+> 4.备份的数据将形成一个tar包，例如下述例子中的命令放到需要还原手机的该路径：/data/logcal/tmp/plugin/meta/vpk/
+```
 adb push Xiaomi=POCO=POCOF2Pro=12=SKQ1.211006.001=N=cf9b5186516f8e33684598d9865a73d.tar.gz /data/logcal/tmp/plugin/meta/vpk/
 ```
-
-
