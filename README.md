@@ -41,8 +41,10 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 > - PC备份数据工具包：vpick-1.0.X-win64.tar.gz
 > - 在PC上解压工具包后，在window终端运行，用于备份数据
 
+> [!TIP]
+>
+> - 需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）使用如下命令查看需要备份数据的硬件序列号,如: HWXXXXX
 ```
-#1.需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）使用如下命令查看需要备份数据的硬件序列号,如: HWXXXXX
 adbdevices.bat
 #2.使用如下命令给您需要备份数据的手机设置序列号便于识别, 如：setsn.bat HWXXXXX
 setsn.bat <硬件序列号>
