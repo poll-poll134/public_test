@@ -45,7 +45,7 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 
 > [!TIP]
 >
-> 1.需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）使用如下命令查看需要备份数据的硬件序列号,如: HWXXXXX
+> - 1.需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）使用如下命令查看需要备份数据的硬件序列号,如: HWXXXXX
 ```
 adbdevices.bat
 ```
