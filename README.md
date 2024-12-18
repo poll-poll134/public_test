@@ -20,13 +20,13 @@
 > - 3.使用如下命令安装工具
 > - 4.操作后重启手机即安装完成
 ```
-#步骤1
+# 步骤1：
 adb push vpick-1.0.X.tar.gz /data/local/tmp/
-#步骤2
+# 步骤2：
 tar -zxvf vpick-1.0.X.tar.gz
-#步骤3
+# 步骤3：
 cd vpick-1.0.X && ./install.sh
-#步骤4
+# 步骤4：
 操作后重启手机即安装完成
 ```
 
@@ -53,12 +53,12 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 > - 3.使用如下命令一键备份您手机的数据,完成后将自动打开备份文件所在目录
 > - 4.备份的数据将形成一个tar包，例如下述例子中的命令放到需要还原手机的该路径：/data/logcal/tmp/plugin/meta/vpk/
 ```
-#步骤1
+# 步骤1：
 adbdevices.bat
-#步骤2
+# 步骤2：
 setsn.bat <硬件序列号>
-#步骤3
+# 步骤3：
 vpick.bat
-#步骤4
+# 步骤4：
 adb push Xiaomi=POCO=POCOF2Pro=12=SKQ1.211006.001=N=cf9b5186516f8e33684598d9865a73d.tar.gz /data/logcal/tmp/plugin/meta/vpk/
 ```
