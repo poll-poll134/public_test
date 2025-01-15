@@ -45,6 +45,13 @@ vpick list
 gif config -a device.brand=Xiaomi -a device.model=Mi10
 ```
 
+**3)查询当前已还原的数据信息（1.0.11开始支持）**：
+
+```
+#显示当前的设备型号、版本信息
+vpick dump
+```
+
 
 ### 2.vpick-V1.0.X-win64.tar.gz 数据备份工具安装及使用方法：
 > [!TIP]
