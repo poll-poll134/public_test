@@ -8,9 +8,9 @@
 > 本工具vpick意在数据安全相关问题的学习与研究，请勿作为其他商业活动及用途，如因此发生相关法律问题，请自行承担
 
 > [!IMPORTANT]
-> - 现已发布重要更新版本 1.0.11
-> - 特色1：如果之前没有触发一键还原，安装时会主动触发一次（数据来自数据包中任意一个）
-> - 特色2：现无需重启即可安装完成
+> - 现已发布apk版本自动数据备份工具
+> - CheckList-Auto.apk
+> - 无需使用此前PC桌面工具的繁琐操作，只要点开即可进行自动备份
 
 
 > [!IMPORTANT]
@@ -63,8 +63,17 @@ gif config -a device.brand=Xiaomi -a device.model=Mi10
 vpick dump
 ```
 
+### 2.CheckList-Auto.apk 数据备份工具使用方法：
+> [!TIP]
+>                      【在需要备份数据的手机中安装此apk，并打开此应用】
+```
+# 步骤1：
+打开应用，备份数据工具apk讲直接对需要备份的手机进行数据备份
+# 步骤2：
+打开应用后，工具会把搜集好的数据放在/data/local/tmp/plugin/meta/vpk路径
+```
 
-### 2.vpick-V1.0.X-win64.tar.gz 数据备份工具安装及使用方法：
+### 3.vpick-V1.0.X-win64.tar.gz 数据备份工具安装及使用方法：
 > [!TIP]
 >                      【在PC上解压工具包后，在window终端运行，用于备份数据】
 > - 需要安装adb与usb驱动，并打开您需要备份的手机的开发者模式，手机连接到电脑后请给予usb连接权限（且使用传输文件模式）
@@ -82,3 +91,5 @@ vpick.bat
 # 步骤4：
 adb push Xiaomi=POCO=POCOF2Pro=12=SKQ1.211006.001=N=cf9b5186516f8e33684598d9865a73d.tar.gz /data/logcal/tmp/plugin/meta/vpk/
 ```
+
+
