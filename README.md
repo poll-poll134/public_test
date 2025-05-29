@@ -9,7 +9,7 @@
 
 > [!IMPORTANT]
 > - 现已发布apk版本自动数据备份工具
-> - CheckList-Auto.apk
+> - HelloVpick4-V1.0.3.apk
 > - 无需使用此前PC桌面工具的繁琐操作，只要点开即可进行自动备份
 
 
